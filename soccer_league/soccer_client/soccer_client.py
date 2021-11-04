@@ -76,22 +76,6 @@ TeamRate = [
     70,
     50,
 ]
-Events = [
-    [": Rumors of financial issues surface!", 0.9],
-    [": Transer rumors for star striker rampant", 0.8],
-    [": Owner pledges to go all-in this season", 1.3],
-    [": Coach found at local bar during practice hours", 0.75],
-    [": Player arrested for drug possession charges", 0.7],
-    [": Investing fortunes into new club equipment", 1.2],
-    [": Team bus gets into accident during transit", 0.6],
-    [": Local fanclub invited to anniversary event", 1.1],
-    [": Captain promises to stay until retirment", 1.2],
-    [": New trainers coming in from overseas", 1.4],
-]
-# def EventChanger(self.value):
-#   return lambda events : self.value * events
-
-# self.value = myfunc(self.value)
 
 
 class Team:
