@@ -1,2 +1,7 @@
 db.sqlite3
 **/__pycache__
+site-backend
+.pylintrc
+
+**.json
+common_utils/data

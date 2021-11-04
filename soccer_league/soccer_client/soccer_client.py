@@ -7,76 +7,6 @@ from .TableSorter import run_merge_sort
 from tabulate import tabulate
 from copy import deepcopy
 
-TeamName = [
-    "Chelsea",
-    "Liverpool",
-    "Manchester City",
-    "Manchester United",
-    "Everton",
-    "Brighton",
-    "Brentford",
-    "Tottenhem",
-    "West Ham United",
-    "Aston Villa",
-    "Arsenal",
-    "Wolves",
-    "Leicester City",
-    "Crystal Palace",
-    "Watford",
-    "Leeds United",
-    "Southampton",
-    "Burnley",
-    "Newcastle",
-    "Norwich City",
-]
-TeamInt = [
-    "CHE",
-    "LIV",
-    "MCI",
-    "MUN",
-    "EVE",
-    "BHA",
-    "BRE",
-    "TOT",
-    "WHU",
-    "AVL",
-    "ARS",
-    "WOL",
-    "LEI",
-    "CRY",
-    "WAT",
-    "LEE",
-    "SOU",
-    "BUR",
-    "NEW",
-    "NOR",
-]
-# TeamRate =  [191,203,205,189,183,140,148,178,160,150,\
-#     160,146,121,112,111,80,89,88,80,78]
-
-TeamRate = [
-    390,
-    380,
-    370,
-    320,
-    300,
-    220,
-    220,
-    300,
-    210,
-    180,
-    290,
-    160,
-    150,
-    140,
-    130,
-    120,
-    110,
-    90,
-    70,
-    50,
-]
-
 
 class Team:
     def __init__(self, TeamName, TeamInt, TeamRate, TeamIndex):
@@ -156,11 +86,7 @@ class League(Team):
             if MatchWeek == ["Rest"]:
                 for Team in self.TeamLst:
                     Team.ScheduledGames.append(
-                        {
-                            "oppo": "Rest",
-                            "loc": None,
-                            "result": None,
-                        }
+                        {"oppo": "Rest", "loc": None, "result": None}
                     )
             else:
                 for Match in MatchWeek:
@@ -198,11 +124,7 @@ class League(Team):
                                 self.TeamLst[
                                     self.TeamLst[Team].TeamIndex
                                 ].ScheduledGames.append(
-                                    {
-                                        "oppo": "Rest",
-                                        "loc": None,
-                                        "result": None,
-                                    }
+                                    {"oppo": "Rest", "loc": None, "result": None}
                                 )
 
     def reset_league(self):
