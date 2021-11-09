@@ -10,3 +10,4 @@ class SoccerLeagueAdmin(admin.ModelAdmin):
 @admin.register(SoccerTeam)
 class SoccerTeamAdmin(admin.ModelAdmin):
     list_display = ("id", "team_name", "team_rate", "team_league")
+    list_filter = ["team_league"]
