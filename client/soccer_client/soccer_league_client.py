@@ -9,19 +9,22 @@ soccer_match_client = SoccerMatchClient()
 
 
 class SoccerLeagueClient:
-    def __init__(self, league_name, team_list):
+    def __init__(self, league_name, league_json, team_list):
         self.match_week = 1
         self.league_name = league_name
         self.team_list = team_list
         # key: team_name, value: index for team in team_list
         self.team_list_mapping = {}
         self.schedule = []
+        self.automatic_promotion = league_json.get("automatic_promotion", [])
+        self.manual_promotion = league_json.get("manual_promotion", [])
+        self.automatic_relegation = league_json.get("automatic_relegation", [])
 
     def return_team_by_name(self, name):
         return self.team_list[self.team_list_mapping[name]]
 
-    def reset_season(self, league_name, team_list):
-        self.__init__(league_name, deepcopy(team_list))
+    def reset_season(self, team_list):
+        self.team_list = deepcopy(team_list)
 
     def randomise_team_list(self):
         random_counter = len(self.team_list) // 2
@@ -106,7 +109,7 @@ class SoccerLeagueClient:
         self.set_schedule(schedule, forward_schedule, return_schedule)
 
     def run_match_week(self, match_week):
-        while match_week <= ((len(self.team_list) * 2) - 2):  # while
+        if match_week <= ((len(self.team_list) * 2) - 2):  # while
             match_index = match_week - 1
             print("Match Week:", match_week)
             for match in self.schedule[match_index]:
@@ -151,11 +154,19 @@ class SoccerLeagueClient:
         for row in sorted_table:
             print(row)
 
+    def run_manual_promotion(self):
+        if len(self.manual_promotion) == 0:
+            return None
+        # round robin client
+
     def prepare_season(self):
         self.sort_league_table(in_season=False)
         self.randomise_team_list()
         self.generate_schedule()
 
     def run_season(self):
-        self.run_match_week(self.match_week)
-        self.sort_league_table()
+        if match_week <= ((len(self.team_list) * 2) - 2):
+            self.run_match_week(self.match_week)
+            self.sort_league_table()
+        else:
+            self.run_manual_promotion()

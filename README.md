@@ -3,7 +3,7 @@
 Backend for Site
 
 CMDs:
-site-backend/Scripts/activate.ps1
+../backend-env/Scripts/activate.ps1
 
 To-Dos:
 Renew soccer league client and work it for backend usage

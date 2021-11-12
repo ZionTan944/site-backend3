@@ -9,6 +9,5 @@ class Command(BaseCommand):
         league_name = "English Premier League"
         league = SoccerLeague.objects.get(league_name=league_name)
         SoccerTeam.objects.filter(team_league=league).update(
-            team_rate=F("team_rate") * 2
+            team_rate=F("team_rate") * 4
         )
-

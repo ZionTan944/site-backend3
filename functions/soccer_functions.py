@@ -1,5 +1,7 @@
-from .models import SoccerTeam, SoccerLeague
-from .soccer_client.soccer_team_client import SoccerTeamClient
+import json
+
+from soccer_league.models import SoccerTeam, SoccerLeague
+from client.soccer_client.soccer_team_client import SoccerTeamClient
 
 
 def retrieve_team_from_league(league_name):
@@ -14,4 +16,4 @@ def retrieve_team_from_league(league_name):
         )
         index += 1
 
-    return team_class_list, teams
+    return json.loads(league.meta_json), team_class_list

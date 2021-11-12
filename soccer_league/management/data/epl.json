@@ -1,0 +1,108 @@
+{
+  "league": {
+    "name": "English Premier League",
+    "meta_json": { "automatic_relegation": [18, 19, 20] }
+  },
+  "teams": [
+    {
+      "name": "Chelsea",
+      "int": "CHE",
+      "rate": 200
+    },
+    {
+      "name": "Liverpool",
+      "int": "LIV",
+      "rate": 220
+    },
+    {
+      "name": "Manchester City",
+      "int": "MCI",
+      "rate": 230
+    },
+    {
+      "name": "Manchester United",
+      "int": "MUN",
+      "rate": 190
+    },
+    {
+      "name": "Everton",
+      "int": "EVE",
+      "rate": 170
+    },
+    {
+      "name": "Brighton",
+      "int": "BHA",
+      "rate": 150
+    },
+    {
+      "name": "Brentford",
+      "int": "BRE",
+      "rate": 60
+    },
+    {
+      "name": "Tottenhem",
+      "int": "TOT",
+      "rate": 180
+    },
+    {
+      "name": "West Ham United",
+      "int": "WHU",
+      "rate": 160
+    },
+    {
+      "name": "Aston Villa",
+      "int": "AVL",
+      "rate": 140
+    },
+    {
+      "name": "Arsenal",
+      "int": "ARS",
+      "rate": 170
+    },
+    {
+      "name": "Wolves",
+      "int": "WOL",
+      "rate": 140
+    },
+    {
+      "name": "Leicester City",
+      "int": "LEI",
+      "rate": 120
+    },
+    {
+      "name": "Crystal Palace",
+      "int": "CRY",
+      "rate": 110
+    },
+    {
+      "name": "Watford",
+      "int": "WAT",
+      "rate": 110
+    },
+    {
+      "name": "Leeds United",
+      "int": "LEE",
+      "rate": 100
+    },
+    {
+      "name": "Southampton",
+      "int": "SOU",
+      "rate": 90
+    },
+    {
+      "name": "Burnley",
+      "int": "BUR",
+      "rate": 80
+    },
+    {
+      "name": "Newcastle",
+      "int": "NEW",
+      "rate": 90
+    },
+    {
+      "name": "Norwich City",
+      "int": "NOR",
+      "rate": 70
+    }
+  ]
+}

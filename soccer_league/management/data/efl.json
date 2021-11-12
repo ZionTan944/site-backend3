@@ -1,0 +1,131 @@
+{
+  "league": {
+    "name": "EFL Championship",
+    "meta_json": {
+      "automatic_promotion": [1, 2],
+      "manual_promotion": [3, 4, 5, 6]
+    }
+  },
+  "teams": [
+    {
+      "name": "Bournemouth",
+      "int": "BOU",
+      "rate": 240
+    },
+    {
+      "name": "Fulham",
+      "int": "FUL",
+      "rate": 230
+    },
+    {
+      "name": "West Bromwich Albion",
+      "int": "WBA",
+      "rate": 210
+    },
+    {
+      "name": "Coventry",
+      "int": "COV",
+      "rate": 195
+    },
+    {
+      "name": "Stoke City",
+      "int": "STK",
+      "rate": 185
+    },
+    {
+      "name": "Queen Park Rangers",
+      "int": "QPR",
+      "rate": 175
+    },
+    {
+      "name": "Blackburn Rovers",
+      "int": "BLA",
+      "rate": 170
+    },
+    {
+      "name": "Hudderfield",
+      "int": "HUD",
+      "rate": 160
+    },
+    {
+      "name": "Millwall",
+      "int": "MIL",
+      "rate": 155
+    },
+    {
+      "name": "Blackpool",
+      "int": "BLK",
+      "rate": 150
+    },
+    {
+      "name": "Luton Town",
+      "int": "LUT",
+      "rate": 140
+    },
+    {
+      "name": "Swansea City",
+      "int": "SWA",
+      "rate": 135
+    },
+    {
+      "name": "Nottingham Forest",
+      "int": "LEI",
+      "rate": 125
+    },
+    {
+      "name": "Middlesbrough",
+      "int": "MID",
+      "rate": 120
+    },
+    {
+      "name": "Birmingham",
+      "int": "BIR",
+      "rate": 120
+    },
+    {
+      "name": "Reading",
+      "int": "REA",
+      "rate": 115
+    },
+    {
+      "name": "Preston",
+      "int": "PRE",
+      "rate": 110
+    },
+    {
+      "name": "Sheffield United",
+      "int": "SHE",
+      "rate": 100
+    },
+    {
+      "name": "Bristol City",
+      "int": "BRI",
+      "rate": 100
+    },
+    {
+      "name": "Cardiff City",
+      "int": "CAR",
+      "rate": 90
+    },
+    {
+      "name": "Peterborough",
+      "int": "PET",
+      "rate": 90
+    },
+    {
+      "name": "HUll City",
+      "int": "HUL",
+      "rate": 75
+    },
+    {
+      "name": "Barnsley",
+      "int": "BAR",
+      "rate": 70
+    },
+    {
+      "name": "Derby County",
+      "int": "DER",
+      "rate": 55
+    }
+  ]
+}
