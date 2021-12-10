@@ -1,4 +1,5 @@
 import random
+import math
 from copy import deepcopy
 
 from .soccer_team_client import SoccerTeamClient
@@ -18,6 +19,9 @@ class SoccerLeagueClient:
         self.schedule = []
         self.automatic_promotion = league_json.get("automatic_promotion", [])
         self.manual_promotion = league_json.get("manual_promotion", [])
+        self.manual_promotion_meta = league_json.get(
+            "manual_promotion_meta", []
+        )  # number of matches per round
         self.automatic_relegation = league_json.get("automatic_relegation", [])
 
     def return_team_by_name(self, name):
@@ -108,16 +112,16 @@ class SoccerLeagueClient:
 
         self.set_schedule(schedule, forward_schedule, return_schedule)
 
-    def run_match_week(self, match_week):
-        if match_week <= ((len(self.team_list) * 2) - 2):  # while
-            match_index = match_week - 1
-            print("Match Week:", match_week)
+    def run_match_week(self):
+        if self.match_week <= self.season_length:  # while
+            match_index = self.match_week - 1
+            print("Match Week:", self.match_week)
             for match in self.schedule[match_index]:
                 home_team = self.return_team_by_name(match[0])
                 away_team = self.return_team_by_name(match[1])
                 soccer_match_client.play_match(match_index, home_team, away_team)
 
-            match_week += 1
+            self.match_week += 1
 
     def sort_league_table(self, in_season=True):
         unsorted_table = self.team_list[1:-1] if in_season is True else self.team_list
@@ -150,23 +154,18 @@ class SoccerLeagueClient:
                     team_movement,
                 ]
             )
-
         for row in sorted_table:
             print(row)
 
-    def run_manual_promotion(self):
-        if len(self.manual_promotion) == 0:
-            return None
-        # round robin client
+        self.sorted_dict = sorted_dict
 
     def prepare_season(self):
         self.sort_league_table(in_season=False)
         self.randomise_team_list()
         self.generate_schedule()
+        self.season_length = (len(self.team_list) * 2) - 2
 
     def run_season(self):
-        if match_week <= ((len(self.team_list) * 2) - 2):
-            self.run_match_week(self.match_week)
+        if self.match_week <= self.season_length:
+            self.run_match_week()
             self.sort_league_table()
-        else:
-            self.run_manual_promotion()

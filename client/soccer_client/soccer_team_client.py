@@ -15,7 +15,7 @@ class SoccerTeamClient:
         self.current_placing = index
         self.historical_placing = []
 
-    def record_stats(self, match_index, goals_for, goals_against):
+    def record_stats(self, match_index, goals_for, goals_against, meta=None):
 
         self.games_played += 1
         self.goals_for += goals_for
@@ -35,6 +35,13 @@ class SoccerTeamClient:
             self.draws += 1
             self.points += 1
             self.scheduled_games[match_index]["result"] = "D"
+
+        if meta is not None:
+            self.scheduled_games[match_index]["meta"] = "penalties"
+            if meta[0] > meta[1]:
+                self.scheduled_games[match_index]["result"] = "W"
+            else:
+                self.scheduled_games[match_index]["result"] = "L"
 
     def __str__(self):
         return self.team_name

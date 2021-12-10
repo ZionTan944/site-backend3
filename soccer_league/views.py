@@ -6,8 +6,8 @@ from client.soccer_client.soccer_league_client import SoccerLeagueClient
 from functions.soccer_functions import retrieve_team_from_league
 
 # default initialisation
-DEFAULT_LEAGUE = "English Premier League"
-# DEFAULT_LEAGUE = "EFL Championship"
+# DEFAULT_LEAGUE = "English Premier League"
+DEFAULT_LEAGUE = "EFL Championship"
 
 
 def test_client(request):

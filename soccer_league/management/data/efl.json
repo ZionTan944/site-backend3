@@ -3,7 +3,8 @@
     "name": "EFL Championship",
     "meta_json": {
       "automatic_promotion": [1, 2],
-      "manual_promotion": [3, 4, 5, 6]
+      "manual_promotion": [3, 4, 5, 6],
+      "manual_promotion_meta": [2, 1]
     }
   },
   "teams": [
@@ -69,7 +70,7 @@
     },
     {
       "name": "Nottingham Forest",
-      "int": "LEI",
+      "int": "NOT",
       "rate": 125
     },
     {
